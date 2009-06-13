@@ -10,11 +10,11 @@ DateTime::Format::Sybase - Parse and format Sybase datetimes
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -65,7 +65,7 @@ Remember C<SMALLDATETIME> fields have only minute precision.
 
 Same as L</parse_datetime>.
 
-=head1 format_datetime
+=head2 format_datetime
 
 Format a L<DateTime> object into a string in the Sybase C<mdy> C<DATETIME> input
 format, with a time component, for insertion into the database.
@@ -86,7 +86,7 @@ automatically be notified of progress on your bug as I make changes.
 
 =head1 SUPPORT
 
-You can look for information at:
+Other resources:
 
 =over 4
 

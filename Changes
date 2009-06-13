@@ -1,4 +1,7 @@
 Revision history for DateTime-Format-Sybase
 
+0.02  2009-06-13 09:16:33
+    - fixup POD
+
 0.01  2009-06-13 03:45:19
     - first release
