@@ -7,6 +7,7 @@ license  'perl';
 
 test_requires 'Test::More';
 
+requires 'DateTime';
 requires 'DateTime::Format::Strptime';
 
 auto_provides;
