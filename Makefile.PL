@@ -12,4 +12,8 @@ requires 'DateTime::Format::Strptime';
 
 auto_provides;
 auto_install;
+
+resources repository =>
+    'git://github.com/rkitover/datetime-format-sybase.git';
+
 WriteAll;
