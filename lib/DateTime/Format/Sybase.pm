@@ -8,13 +8,9 @@ use DateTime::Format::Strptime;
 
 DateTime::Format::Sybase - Parse and format Sybase datetimes
 
-=head1 VERSION
-
-Version 0.02
-
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 =head1 SYNOPSIS
 
@@ -22,7 +18,7 @@ our $VERSION = '0.02';
   use DBI;
 
   my $dbh = DBI->connect('dbi:Sybase:SERVER', 'sa', '');
-  $dbh->syb_date_fmt('ISO_Strict'); # output format
+  $dbh->syb_date_fmt('ISO_strict'); # output format
   $dbh->do('set dateformat mdy'); # input format
 
   my $dt = DateTime::Format::Sybase->parse_datetime(
@@ -110,7 +106,7 @@ L<http://search.cpan.org/dist/DateTime-Format-Sybase/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (c) 2009 Rafael Kitover
+Copyright (c) 2009-2010 Rafael Kitover
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
