@@ -1,5 +1,6 @@
 Revision history for DateTime-Format-Sybase
 
+0.04  2011-05-17 14:37:27
     - change output format to ISO for ODBC compatibility
 
 0.03  2010-04-14 22:11:36
