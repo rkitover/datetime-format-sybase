@@ -18,11 +18,11 @@ our $VERSION = '0.03';
   use DBI;
 
   my $dbh = DBI->connect('dbi:Sybase:SERVER', 'sa', '');
-  $dbh->syb_date_fmt('ISO_strict'); # output format
+  $dbh->syb_date_fmt('ISO'); # output format
   $dbh->do('set dateformat mdy'); # input format
 
   my $dt = DateTime::Format::Sybase->parse_datetime(
-    '2004-08-21T14:36:48.080Z'
+    '2004-08-21 14:36:48.080'
   );
 
   DateTime::Format::Sybase->format_datetime($dt); # '08/21/2004 14:36:48.080'
@@ -35,7 +35,7 @@ with Sybase.
 =cut
 
 my $output_format = DateTime::Format::Strptime->new(
-  pattern => '%Y-%m-%dT%H:%M:%S.%3NZ'
+  pattern => '%Y-%m-%d %H:%M:%S.%3N'
 );
 
 my $input_format = DateTime::Format::Strptime->new(
@@ -53,7 +53,7 @@ sub format_timestamp { shift; $input_format->format_datetime(@_) }
 =head2 parse_datetime
 
 Parse a string returned by L<DBD::Sybase> for a C<DATETIME> or C<SMALLDATETIME>
-column in the C<ISO_Strict> L<DBD::Sybase/syb_date_fmt> format.
+column in the C<ISO> L<DBD::Sybase/syb_date_fmt> format.
 
 Remember C<SMALLDATETIME> fields have only minute precision.
 
@@ -106,7 +106,7 @@ L<http://search.cpan.org/dist/DateTime-Format-Sybase/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright (c) 2009-2010 Rafael Kitover
+Copyright (c) 2009-2011 Rafael Kitover
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

@@ -5,7 +5,7 @@ use DateTime::Format::Sybase;
 use Test::More tests => 10;
 
 ok((my $dt = DateTime::Format::Sybase->parse_datetime(
-    '2004-08-21T14:36:48.080Z'
+    '2004-08-21 14:36:48.080'
 )), 'parsed datetime');
 
 is $dt->year, 2004, 'year';
